@@ -1,5 +1,5 @@
 {% set name = "murky" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/murky-{{ version }}.tar.gz
-  sha256: 0923257e06f984eb3070cefcd24a6fdef047ab7b4ac7b6d2877c9fdafc77e6e2
+  sha256: 6a46f3b2e74d9efe498d2ec7cfebcb3509c63301aa966eaf7ace12b362dd21bb
 
 build:
-  # skip: true  # [py<3.8 or py>=311]
+  # skip: true  # [py<3.8 or py>=312]
   entry_points:
     - create_release_notes = murky.create_release_notes:main
     - murky_tool = murky.murky_tool:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
     - pip
     - python
+    - versioneer
   run:
     - python
     - pygithub
     - pyyaml
+    - versioneer
 
 test:
   imports:
