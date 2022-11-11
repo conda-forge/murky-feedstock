@@ -15,7 +15,7 @@ build:
     - create_release_notes = murky.create_release_notes:main
     - murky_tool = murky.murky_tool:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
