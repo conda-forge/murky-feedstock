@@ -1,5 +1,5 @@
 {% set name = "murky" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/murky-{{ version }}.tar.gz
-  sha256: 6a46f3b2e74d9efe498d2ec7cfebcb3509c63301aa966eaf7ace12b362dd21bb
+  sha256: 09246dad0ccdff0873dd7989987667d9acc5d6945feca430458a2f78e885d433
 
 build:
   # skip: true  # [py<3.8 or py>=312]
