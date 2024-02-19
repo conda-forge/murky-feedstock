@@ -25,6 +25,7 @@ requirements:
   run:
     - python
     - pygithub
+    - python-magic
     - pyyaml
     - versioneer
 
@@ -35,6 +36,7 @@ test:
     - pip check
     - create_release_notes --help
     - murky_tool --help
+    - update_copyright_date --help
   requires:
     - pip
 
