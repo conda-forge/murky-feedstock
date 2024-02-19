@@ -14,8 +14,10 @@ build:
   entry_points:
     - create_release_notes = murky.create_release_notes:main
     - murky_tool = murky.murky_tool:main
+    - update_copyright_date = murky.update_copyright_date:main
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  skip: true  # [win]
 
 requirements:
   host:
