@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/murky-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/murky-{{ version }}.tar.gz
   sha256: 09246dad0ccdff0873dd7989987667d9acc5d6945feca430458a2f78e885d433
 
 build:
@@ -16,13 +16,14 @@ build:
     - murky_tool = murky.murky_tool:main
     - update_copyright_date = murky.update_copyright_date:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   skip: true  # [win or osx]
 
 requirements:
   host:
     - pip
     - python
+    - setuptools
     - versioneer
   run:
     - python
